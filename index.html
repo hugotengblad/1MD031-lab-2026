@@ -1,29 +1,114 @@
 <!DOCTYPE HTML>
 <html lang="en">
    <head>
-       <title>Burgirstore</title>
+       <title>Bobr Burger</title>
        <meta charset="utf-8"/>
    </head>
    <body>
-        <h1>Välkommen till BurgirStore!</h1>
+        <header>
+            <h1>Välkommen till Bobr Burger!</h1>
+        </header>
         
-            <h2>Hunrig? Här kan du välja något att damma!</h2>
+        <main> 
+        <section>
+            <h3>Hungrig? Varsågod att damma!</h3>
 
+            <div style="display: inline-block"> 
+            <h2>Vår meny:</h2>
             <h3>1. Super Smash</h3>
-                <h4> Smash or pass? Är det ens en fråga?</h4>
-                <img src="/hamburgare_1.jpg" alt="SuperSmash Burger" title="SuperSmash" width="300">
+                <p> Smash or pass? Är det ens en fråga?</p>
+                <img src="/img/hamburgare_1.jpg" alt="SuperSmash Burger" title="SuperSmash" width="300">
 
+                <ul>
+                    <li>180 gram högrev</li>
+                    <li>Bacon</li>
+                    <li>Lite mer grejer</li>
+                    <li>Innehåller gluten</li>
+                </ul>
+            </div>
+
+            <div style="display: inline-block">
             <h3>2. Bun Apetite</h3>
-                <h4> Säg mig en burgare med bättre bröd </h4>
-                <img src="/hamburgare_2.jpeg" alt="SuperSmash Burger" title="SuperSmash" width="300">
+                <p> Säg mig en burgare med bättre bröd </p>
+                <img src="/img/hamburgare_2.jpeg" alt="Bun Apetite" title="SuperSmash" width="300">
 
-            <h3>2. Big boy</h3>
-                <h4> Klarar-du den?</h4>
-                <img src="/hamburgare_3.jpeg" alt="SuperSmash Burger" title="SuperSmash" width="300">
+                <ul>
+                    <li>180 gram högrev</li>
+                    <li>Picklad rödlök</li>
+                    <li>Lite mer grejer</li>
+                    <li>Glutenfritt bröd</li>
+                </ul>
+            </div>
 
+            <div style="display: inline-block"> 
+            <h3>3. Big Bobr</h3>
+                <p> Klarar-du den?</p>
+                <img src="/img/hamburgare_3.jpeg" alt="Big Bobr" title="SuperSmash" width="300">
+       
+                <ul>
+                    <li>500 gram högrev</li>
+                    <li>Ost</li>
+                    <li>Inga mer grejer</li>
+                    <li>Innehåller gluten</li>
+                </ul>
+            </div>
+
+            </section>
         
-        <h2>Leveransinformation</h2>
-        <h3>Var bor din brevlåda?</h3>
+        <section>
+            <h2>Leveransinformation</h2>
+                <p>
+                    <label for="name">Fullständigt namn</label><br>
+                    <input type="text" id="name" name="n" required="required" placeholder="Fullständigt namn">
+                </p>
+                
+                <p>
+                     <label for="email">E-mail</label><br>
+                    <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+                </p>
 
+                <p>
+                    <label for="street">Gata</label><br>
+                    <input type="text" id="street" name="s" placeholder="Gata">
+                </p>
+
+                <p>
+                    <label for="housenumb">Husnummer</label><br>
+                    <input type="number" id="housenumb" name="hn" placeholder="Husnummer">
+                </p>
+
+                <p>
+                    <label for="payment">Betalning</label><br>
+                    <select id="payment" name="pm">
+                        <option selected="selected">Kreditkort</option>
+                        <option>Klarna</option>
+                        <option>Swish</option>
+                        <option>Springnota</option>
+                    </select>
+                </p>
+
+                <p> 
+                    <span>Kön</span><br>
+                    <input type="radio" id="gender" name="g" value="woman">
+                    <label for="woman">Kvinna</label><br>
+                    <input type="radio" id="gender" name="g" value="man">
+                    <label for="man">Man</label><br>
+                    <input type="radio" id="gender" name="g" value="nonbinary">
+                    <label for="nonbinary">Icke-binär</label><br>
+                    <input type="radio" id="gender" name="g" value="undisclosed" checked="checked">
+                    <label for="undisclosed">Vill ej ange</label><br>
+                </p>
+
+                <button type="submit">
+                    <img src="/img/bestick.jpg" width="14">
+                    Beställ din burgare!
+                </button>
+
+        </section>
+        </main>
+        <hr>
+        <footer>
+            <p> &copy; 2026 Bobr Burger</p>
+        </footer>
    </body>
 </html>
