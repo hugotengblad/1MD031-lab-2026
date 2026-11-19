@@ -1,0 +1,36 @@
+[
+    {
+       
+        "name": "SuperSmash", 
+        "description": "Smash or pass? Är det ens en fråga?",
+        "content": "Bacon, ost, sallad, Bobr dressing", 
+        "g": 180, 
+        "url": "img/hamburgare_1.jpg", 
+        "gluten": true, 
+        "lactose": true
+    },
+
+   { 
+        "name": "Bun Apetite",
+        "description": "Säg mig en burgare med bättre bröd", 
+        "content": "Ost, picklad rödlök, majo", 
+        "g": 180, 
+        "url": "img/hamburgare_2.jpeg", 
+        "gluten": false, 
+        "lactose": false
+   },
+
+    {
+        "name": "Bobr Burger", 
+        "description": "Den är gaaaaalet stor. Klarar-du den?", 
+        "content": "Kött och ost, inget mer", 
+        "g": 450, 
+        "url":"img/hamburgare_3.jpeg", 
+        "gluten": true, 
+        "lactose": false
+    }
+    
+]
+
+
+ 
