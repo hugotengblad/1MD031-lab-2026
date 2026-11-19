@@ -1,127 +1,13 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-       <title>Bobr Burger</title>
-       <link rel="stylesheet" type="text/css" href="/css/style.css">
-       <meta charset="utf-8"/>
-   </head>
-   <body>
-        
-        
-        <header>
-            <img src="/img/restaurang.jpg" id="header-img" alt="Restaurang">
-            <h1 >Välkommen till Bobr Burger!</h1>
-        </header>
-        
-        
-        <main> 
-        <section id="menu">
-            <h2 id="slogan">Hungrig? Varsågod att damma!</h2><br>
-            <h2 id="menurubrik">Vår meny:</h2>
-
-            <div class="wrapper">
-                <div class="box"> 
-                    <h3>1. Super Smash</h3>
-                    <p> Smash or pass? Är det ens en fråga?</p>
-                    <img src="/img/hamburgare_1.jpg" alt="SuperSmash Burger" title="SuperSmash" width="320">
-                
-         
-                    <ul class="contains">
-                        <li>180 gram högrev</li>
-                        <li>Bacon</li>
-                        <li>Lite mer grejer</li>
-                        <li>Innehåller <span id="allergi">gluten</span></li>
-                        
-                    </ul>
-           
-
-                </div>
-
-                <div class="box">
-                    <h3>2. Bun Apetite</h3>
-                    <p> Säg mig en burgare med bättre bröd </p>
-                    <img src="/img/hamburgare_2.jpeg" alt="Bun Apetite" title="SuperSmash" width="320">
-
-            
-                    <ul class="contains">
-                        <li>180 gram högrev</li>
-                        <li>Picklad rödlök</li>
-                        <li>Lite mer grejer</li>
-                        <li>Innehåller ej <span id="allergi">gluten</span></li>
-                    </ul>
-             
-                </div>
-
-                <div class="box"> 
-                    <h3>3. Big Bobr</h3>
-                    <p> Klarar-du den?</p>
-                    <img src="/img/hamburgare_3.jpeg" alt="Big Bobr" title="SuperSmash" width="320">
-       
-                    <ul class="contains">
-                        <li>500 gram högrev</li>
-                        <li>Ost</li>
-                        <li>Inga mer grejer</li>
-                        <li>Innehåller <span id="allergi">gluten</span></li>
-                    </ul>
-          
-                </div>
-            </div>
-        </section>
-        
-        <section id="orderback">
-            <h2>Leveransinformation</h2>
-                <p>
-                    <label for="name">Fullständigt namn</label><br>
-                    <input type="text" id="name" name="n" required="required" placeholder="Fullständigt namn">
-                </p>
-                
-                <p>
-                     <label for="email">E-mail</label><br>
-                    <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
-                </p>
-
-                <p>
-                    <label for="street">Gata</label><br>
-                    <input type="text" id="street" name="s" placeholder="Gata">
-                </p>
-
-                <p>
-                    <label for="housenumb">Husnummer</label><br>
-                    <input type="number" id="housenumb" name="hn" placeholder="Husnummer">
-                </p>
-
-                <p>
-                    <label for="payment">Betalning</label><br>
-                    <select id="payment" name="pm">
-                        <option selected="selected">Kreditkort</option>
-                        <option>Klarna</option>
-                        <option>Swish</option>
-                        <option>Springnota</option>
-                    </select>
-                </p>
-
-                <p> 
-                    <span id="gender">Kön</span><br>
-                    <input type="radio" id="gender" name="g" value="woman">
-                    <label for="woman">Kvinna</label><br>
-                    <input type="radio" id="gender" name="g" value="man">
-                    <label for="man">Man</label><br>
-                    <input type="radio" id="gender" name="g" value="nonbinary">
-                    <label for="nonbinary">Icke-binär</label><br>
-                    <input type="radio" id="gender" name="g" value="undisclosed" checked="checked">
-                    <label for="undisclosed">Vill ej ange</label><br>
-                </p>
-
-                <button type="submit">
-                    <img src="/img/bestick.jpg" width="14">
-                    Beställ din burgare!
-                </button>
-
-        </section>
-        </main>
-        <hr>
-        <footer>
-            <p> &copy; 2026 Bobr Burger</p>
-        </footer>
-   </body>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

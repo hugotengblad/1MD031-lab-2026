@@ -2,7 +2,13 @@
     <div id="orders">
       <div id="orderList">
         <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
+          #{{ key }}:
+           <span v-for="(amount, name) in order.orderItems" v-bind:key="name">
+            {{ name }} ({{ amount }} st)
+           </span>
+          <div class="personal" v-if="order.personal">
+            Delivery info: {{order.personal.fullName }}, {{order.personal.email }}, {{ order.personal.payment }}, {{order.personal.gender }}
+          </div>
         </div>
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
@@ -13,10 +19,11 @@
       </div>
     </div>
   </template>
+
   <script>
   import io from 'socket.io-client'
   const socket = io("localhost:3000");
-  
+
   export default {
     name: 'DispatcherView',
     data: function () {
@@ -59,7 +66,7 @@
     cursor: crosshair;
     background-image: url('/img/polacks.jpg');
   }
-  
+
   #dots div {
     position: absolute;
     background: black;
@@ -69,5 +76,8 @@
     height:20px;
     text-align: center;
   }
+
+  .personal {
+    font-style: italic;
+  }
   </style>
-  
