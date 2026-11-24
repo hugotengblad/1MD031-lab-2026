@@ -7,7 +7,7 @@
             {{ name }} ({{ amount }} st)
            </span>
           <div class="personal" v-if="order.personal">
-            Delivery info: {{order.personal.fullName }}, {{order.personal.email }}, {{ order.personal.payment }}, {{order.personal.gender }}
+            Delivery info: Name: {{order.personal.fullName }}, Email: {{order.personal.email }}, Payment: {{ order.personal.payment }}, Gender: {{order.personal.gender }}
           </div>
         </div>
         <button v-on:click="clearQueue">Clear Queue</button>
@@ -46,7 +46,8 @@
     }
   }
   </script>
-  <style>
+
+  <style scoped>
   #orderList {
     top:1em;
     left:1em;

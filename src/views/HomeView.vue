@@ -60,13 +60,13 @@
 
                 <p>
                     <span id="gender">Kön</span><br>
-                    <input type="radio" id="gender" v-model="gender" value="woman">
+                    <input type="radio" id="woman" v-model="gender" value="woman">
                     <label for="woman">Kvinna</label><br>
-                    <input type="radio" id="gender" v-model="gender" value="man">
+                    <input type="radio" id="man" v-model="gender" value="man">
                     <label for="man">Man</label><br>
-                    <input type="radio" id="gender" v-model="gender" value="nonbinary">
+                    <input type="radio" id="nonbinary" v-model="gender" value="nonbinary">
                     <label for="nonbinary">Icke-binär</label><br>
-                    <input type="radio" id="gender" v-model="gender" value="undisclosed" checked="checked">
+                    <input type="radio" id="undisclosed" v-model="gender" value="undisclosed" checked="checked">
                     <label for="undisclosed">Vill ej ange</label><br>
                 </p>
 
@@ -121,10 +121,11 @@ export default {
       fullName: "",
       email: "",
       payment: "Kreditkort",
-      gender: "",
+      gender: "Vill ej ange",
     }
   },
   methods: {
+
     placeOrder: function () {
     console.log(
       this.fullName,
@@ -159,16 +160,15 @@ export default {
     setLocation: function (event) {
       var offset = {x: event.currentTarget.getBoundingClientRect().left,
                     y: event.currentTarget.getBoundingClientRect().top};
-      /*socket.emit("addOrder", { orderId: this.getOrderNumber(), */
+
       this.location = {
         x: event.clientX - 10 - offset.x,
         y: event.clientY - 10 - offset.y
       };
-
     }
-
   }
 }
+
 </script>
 
 <style>
@@ -207,17 +207,8 @@ img {
     height: auto;
 }
 
-/* nav ul li {
-    display: inline-block;
-    background-color: grey;
-    padding: 1em;
-    margin: 1em;
-} */
-
 header {
     position: relative;
-    /*background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("/img/restaurang.jpg");
-    background-size: cover;*/
     overflow: hidden;
     width: 100%;
     height: 250px;
@@ -326,10 +317,22 @@ option:hover, input:hover, select:hover, button:hover {
     overflow: scroll;
  }
  #map {
+    position: relative;
     width: 1920px;
     height: 1078px;
     background: url("/img/polacks.jpg");
+    cursor: crosshair;
   }
+
+  #dots div {
+  position: absolute;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
 
   #footer {
     color: black;
